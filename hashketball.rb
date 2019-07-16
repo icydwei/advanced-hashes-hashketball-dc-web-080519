@@ -188,5 +188,7 @@ def team_names
   return teams
 end
 
-
+def player_numbers(team_name)
+  teamjerseys = []
+  
 
