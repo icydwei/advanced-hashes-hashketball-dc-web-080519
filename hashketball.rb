@@ -170,11 +170,10 @@ def team_colors(team_name)
       if attribute == :team_name && game_hash[teamlocation][attribute] == team_name
        binding.pry
        return game_hash[teamlocation][:colors]
-      else
-        return "Team not found"
       end
     end
   end
+  return "Team not found"
 end
         
 
