@@ -275,6 +275,7 @@ def winning_team
         end
       end
     end
+    if teamlocation == :away
   end
   return playername
 end  
