@@ -289,5 +289,24 @@ def winning_team
     return game_hash[:home][:team_name]
   else return game_hash[:away][:team_name]
   end
+end
+
+def player_with_longest_name
+  namecharcount = 0
+  longestname = ''
+  game_hash.each do |teamlocation, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |playerattributes|
+          if playerattributes[:player_name] > points
+            points = playerattributes[:points]
+            playername = playerattributes[:player_name]
+            binding.pry
+          end
+        end
+      end
+    end
+  end
+  return playername
 end  
   
