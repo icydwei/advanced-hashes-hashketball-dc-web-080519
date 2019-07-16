@@ -137,12 +137,12 @@ def num_points_scored(player_name)
         if playerattributes.include?(player_name)
             #binding.pry
             return playerattributes[:points]
-          end
+            end
         end  
       end  
     end
   end  
-  return "Player NA"    
+  return "Player not available"    
 end  
 
 
