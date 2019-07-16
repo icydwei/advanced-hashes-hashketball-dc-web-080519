@@ -194,15 +194,12 @@ def player_numbers(team_name)
     team_data.each do |attribute, data|
       if game_hash[teamlocation][attribute] == team_name
         game_hash[teamlocation][:players].each do |playerstats|
-        binding.pry
+        teamjerseys.push(playerstats[:number])
+        #binding.pry
         end
       end
-    binding.pry  
+    #binding.pry  
     end
   end  
-      #binding.pry
-      #if attribute == :players
-       # game_hash[teamlocation][attribute].each do |playerattributes|
-        #binding.pry
-        #if playerattributes[:player_name].include?(player_name)
+  return teamjerseys
 end
