@@ -135,7 +135,8 @@ def num_points_scored(player_name)
         game_hash[teamlocation][attribute].each do |playerattributes|
         binding.pry
         return game_hash[teamlocation][attribute][player]
-      end    
+        end
+      end  
     end
   end  
       
