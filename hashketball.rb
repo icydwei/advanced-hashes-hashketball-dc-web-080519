@@ -261,3 +261,24 @@ def most_points_scored
   end
   return playername
 end  
+
+def winning_team
+  hometotal = 0
+  awaytotal = 0
+   game_hash.each do |teamlocation, team_data|
+    if teamlocation == :home
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |playerattributes|
+          if playerattributes[:points] > points
+            points = playerattributes[:points]
+            playername = playerattributes[:player_name]
+            #binding.pry
+          end
+        end
+      end
+    end
+  end
+  return playername
+end  
+  
