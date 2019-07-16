@@ -192,6 +192,11 @@ def player_numbers(team_name)
   teamjerseys = []
   game_hash.each do |teamlocation, team_data|
     team_data.each do |attribute, data|
+      if game_hash[teamlocation][attribute] == team_name
+        game_hash[teamlocation][:players].each do |playerstats]
+        binding.pry
+        end
+      end
     binding.pry  
     end
   end  
