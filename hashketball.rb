@@ -309,5 +309,29 @@ def player_with_longest_name
     end
   end
   return longestname
-end  
+end
+
+def long_name_steals_a_ton
+  stealcount = 0
+  stealname = ''
+  game_hash.each do |teamlocation, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |playerattributes|
+          #binding.pry
+          if playerattributes[:steals] > stealcount
+            stealcount = playerattributes[:steals]
+            stealname = playerattributes[:player_name]
+            #binding.pry
+          end
+        end
+      end
+    end
+  end
+  if stealname == player_with_longest_name
+    return true
+  else
+    return false
+  end
+end
   
