@@ -212,7 +212,7 @@ def player_stats(player_name)
          #binding.pry
          if playerattributes[:player_name] == player_name
            binding.pry
-           return playerattributes.except(:player_name)
+           return playerattributes.reject(:player_name)
          end
         end 
       end
