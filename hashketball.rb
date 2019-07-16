@@ -203,3 +203,18 @@ def player_numbers(team_name)
   end  
   return teamjerseys
 end
+
+def player_stats(player_name)
+  game_hash.each do |teamlocation, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :playerstats
+        game_hash[teamlocation][attribute].each do |playerattributes|
+         if playerattributes[:player_name] == player_name
+           return playerattributes
+         end
+        end 
+      end
+    end
+  end
+  return "Player not found"
+end
