@@ -205,7 +205,6 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  new_hash = {}
   game_hash.each do |teamlocation, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
@@ -213,7 +212,7 @@ def player_stats(player_name)
          #binding.pry
          if playerattributes[:player_name] == player_name
            binding.pry
-           return playerattributes.reject(:player_name)
+           return playerattributes.deleteif(:player_name)
          end
         end 
       end
