@@ -212,7 +212,7 @@ def player_stats(player_name)
         data.each do |playerattributes|
          #binding.pry
          if playerattributes[:player_name] == player_name
-           binding.pry
+           #binding.pry
            new_hash = playerattributes.delete_if do |key, value|
              key == :player_name
            end
