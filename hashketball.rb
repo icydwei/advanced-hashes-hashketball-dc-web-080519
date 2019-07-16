@@ -270,7 +270,7 @@ def winning_team
       team_data.each do |attribute, data|
         if attribute == :players
           data.each do |playerattributes|
-            hometotal = playerattributes[points] + hometotal
+            hometotal = playerattributes[:points] + hometotal
           end
         end
       end
@@ -279,7 +279,7 @@ def winning_team
       team_data.each do |attribute, data|
         if attribute == :players
           data.each do |playerattributes|
-            awaytotal = playerattributes[points] + awaytotal
+            awaytotal = playerattributes[:points] + awaytotal
           end
         end
       end
