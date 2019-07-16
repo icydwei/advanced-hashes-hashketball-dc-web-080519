@@ -133,13 +133,13 @@ def num_points_scored(player_name)
     team_data.each do |attribute, data|
       if attribute == :players
         game_hash[teamlocation][attribute].each do |playerattributes|
-        binding.pry
-        return game_hash[teamlocation][attribute][player]
+        if playerattributes.include?(player_name)
+            return playerattributes[:points]
         end
       end  
     end
   end  
-      
+  return    
 end  
 
 
