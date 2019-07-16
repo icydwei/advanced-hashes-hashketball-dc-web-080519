@@ -210,6 +210,7 @@ def player_stats(player_name)
       if attribute == :playerstats
         game_hash[teamlocation][attribute].each do |playerattributes|
          if playerattributes[:player_name] == player_name
+           binding.pry
            return playerattributes
          end
         end 
