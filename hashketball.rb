@@ -207,11 +207,11 @@ end
 def player_stats(player_name)
   game_hash.each do |teamlocation, team_data|
     team_data.each do |attribute, data|
-      if attribute == :playerstats
+      if attribute == :players
         game_hash[teamlocation][attribute].each do |playerattributes|
-         binding.pry
+         #binding.pry
          if playerattributes[:player_name] == player_name
-           binding.pry
+           #binding.pry
            return playerattributes
          end
         end 
