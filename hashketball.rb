@@ -301,13 +301,13 @@ def player_with_longest_name
           #binding.pry
           if playerattributes[:player_name].length > namecharcount
             namecharcount = playerattributes[:player_name].length
-            playername = playerattributes[:player_name]
+            longestname = playerattributes[:player_name]
             #binding.pry
           end
         end
       end
     end
   end
-  return playername
+  return longestname
 end  
   
