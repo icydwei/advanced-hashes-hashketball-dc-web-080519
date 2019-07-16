@@ -164,6 +164,18 @@ def shoe_size(player_name)
   return "Player not available"    
 end  
 
+def team_colors(team_name)
+  game_hash.each do |teamlocation, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :team_name && game_hash[teamlocation][attribute] == team_name
+        return game_hash[teamlocation][:colors]
+      else
+        return "Team not found"
+      end
+    end
+  end
+end
+        
 
 
 
