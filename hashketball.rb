@@ -276,7 +276,18 @@ def winning_team
       end
     end
     if teamlocation == :away
+      team_data.each do |attribute, data|
+        if attribute == :players
+          data.each do |playerattributes|
+            awaytotal = playerattributes[points] + awaytotal
+          end
+        end
+      end
+    end
   end
-  return playername
+  if hometotal > awaytotal
+    return game_hash[:home][:team_name]
+  else return game_hash[:away][:team_name]
+  end
 end  
   
