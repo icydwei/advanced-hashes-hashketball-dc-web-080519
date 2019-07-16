@@ -236,6 +236,7 @@ def big_shoe_rebounds
             shoe_size = playerattributes[:shoe]
             bigfoot = playerattributes[:player_name]
             binding.pry
+          end
         end
       end
     end
