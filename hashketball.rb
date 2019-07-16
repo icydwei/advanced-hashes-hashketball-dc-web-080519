@@ -176,8 +176,17 @@ def team_colors(team_name)
   return "Team not found"
 end
         
-
-
+def team_names
+  teams = []
+  game_hash.each do |teamlocation, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :team_name  
+        teams.push(game_hash[teamlocation][attribute])
+      end
+    end
+  end  
+  return teams
+end
 
 
 
