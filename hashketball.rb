@@ -146,7 +146,23 @@ def num_points_scored(player_name)
   return "Player not available"    
 end  
 
-
+def num_points_scored(player_name)
+  game_hash.each do |teamlocation, team_data|
+    team_data.each do |attribute, data|
+      #binding.pry
+      if attribute == :players
+        game_hash[teamlocation][attribute].each do |playerattributes|
+        #binding.pry
+        if playerattributes[:player_name].include?(player_name)
+            #binding.pry
+            return playerattributes[:points]
+            end
+        end  
+      end  
+    end
+  end  
+  return "Player not available"    
+end  
 
 
 
