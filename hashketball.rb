@@ -1,3 +1,5 @@
+require "pry"
+
 def game_hash
   teams = {
     :home => {
@@ -126,7 +128,14 @@ def game_hash
   return teams
 end
 
-
+def num_points_scored(player_name)
+  game_hash.each do |teamlocation, team_data|
+    team_data.each do |attribute, data|
+      binding.pry
+    end
+  end  
+      
+end  
 
 
 
