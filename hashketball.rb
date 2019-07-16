@@ -146,7 +146,7 @@ def num_points_scored(player_name)
   return "Player not available"    
 end  
 
-def num_points_scored(player_name)
+def shoe_size(player_name)
   game_hash.each do |teamlocation, team_data|
     team_data.each do |attribute, data|
       #binding.pry
@@ -155,7 +155,7 @@ def num_points_scored(player_name)
         #binding.pry
         if playerattributes[:player_name].include?(player_name)
             #binding.pry
-            return playerattributes[:points]
+            return playerattributes[:shoe]
             end
         end  
       end  
