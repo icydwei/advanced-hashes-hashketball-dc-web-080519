@@ -215,10 +215,11 @@ def player_stats(player_name)
            binding.pry
            new_hash = playerattributes.delete_if do |key, value|
              key == :player_name
+           end
          end
         end 
       end
     end
   end
-  return "Player not found"
+  return new_hash
 end
