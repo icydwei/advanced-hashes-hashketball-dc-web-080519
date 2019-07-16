@@ -298,8 +298,8 @@ def player_with_longest_name
     team_data.each do |attribute, data|
       if attribute == :players
         data.each do |playerattributes|
-          if playerattributes[:player_name] > points
-            points = playerattributes[:points]
+          if playerattributes[:player_name] > namecharcount
+            namecharcount = playerattributes[:player_name]
             playername = playerattributes[:player_name]
             binding.pry
           end
